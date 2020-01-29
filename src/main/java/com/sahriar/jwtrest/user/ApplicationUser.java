@@ -9,10 +9,9 @@ import javax.persistence.*;
  * @since Oct 24, 2018
  */
 
-
 @Entity
 @Table(name = "t_user")
-public class User extends BaseEntity {
+public class ApplicationUser extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -82,13 +81,8 @@ public class User extends BaseEntity {
 
     @Override
     public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", username='" + username + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", password='" + password + '\'' +
-                ", encodedPassword='" + encodedPassword + '\'' +
-                '}';
+        return "User{" + "userId=" + userId + ", username='" + username + '\'' + ", firstName='" + firstName + '\''
+                + ", lastName='" + lastName + '\'' + ", password='" + password + '\'' + ", encodedPassword='"
+                + encodedPassword + '\'' + '}';
     }
 }
